@@ -1,0 +1,21 @@
+{
+    "name": "reisraff/phulp-filter",
+    "description": "The filter addon for phulp",
+    "keywords": ["phulpplugin", "phulp", "php", "filter"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rafael Reis",
+            "email": "reisraff@gmail.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "Phulp\\Filter\\" : "src"
+        }
+    },
+    "require": {
+        "reisraff/phulp": "~1.7"
+    }
+}
