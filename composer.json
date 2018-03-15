@@ -1,6 +1,6 @@
 {
     "name": "reisraff/phulp-filter",
-    "description": "The filter addon for phulp",
+    "description": "Filter your files",
     "keywords": ["phulpplugin", "phulp", "php", "filter"],
     "license": "MIT",
     "type": "library",

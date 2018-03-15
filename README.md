@@ -14,13 +14,13 @@ $ composer require reisraff/phulp-filter
 <?php
 
 use Phulp\Filter\Filter;
+use Phulp\DistFile;
 
 $phulp->task('filter', function ($phulp) {
     $phulp->src(['src/'], '/html$/')
-        ->pipe(new Filter(function (\Phulp\DistFile $distFile) {
-            if ($distFile->getName() == 'foo.html') { // and then foo.html will be removed
-                return true;
-            }
+        ->pipe(new Filter(function (DistFile $distFile) {
+            // and then foo.html will be removed
+            return $distFile->getName() !== 'foo.html' ? true : false;
         }));
 });
 
